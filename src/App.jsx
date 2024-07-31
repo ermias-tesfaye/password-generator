@@ -42,7 +42,7 @@ const App = () => {
         setButtonText('Copied');
         setTimeout(() => {
           setButtonText('Copy');
-        }, 3000);
+        }, 1000);
       })
       .catch((err) => {
         console.error('Failed to copy password: ', err);
@@ -61,6 +61,7 @@ const App = () => {
             type="text"
             name=""
             id=""
+            readOnly
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="flex-1 px-6 py-2 rounded-l-md text-black text-lg outline-none"
